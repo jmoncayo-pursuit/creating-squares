@@ -1,3 +1,6 @@
+:root {
+    --random-color: hsl(0, 100%, 50%);
+}
 body {
     margin: 0;
     height: 100vh;
@@ -44,3 +47,8 @@ button {
 
   }
   
+  /* .nested-square {
+    border-color: var(--random-color);
+    border: 15px;
+    border-width: 15px;
+  } */
