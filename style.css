@@ -1,19 +1,11 @@
 :root {
-    --random-color: hsl(0, 100%, 50%);
+    --random-color: hsl(0, 100%, 50%); 
 }
+
 body {
     margin: 0;
     height: 100vh;
     width: 100vw;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container {
-    width: 90%;
-    height: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,10 +13,17 @@ body {
 
 .box {
     width: 100%; 
-    height: 100%; 
-    border: 10px solid black;
+    height: 100%;    
     position: relative;
-    margin: 0 auto;
+}
+
+.container {
+    width: 95%;
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: .25rem solid black; 
 }
 
 button#enterBtn {
@@ -32,23 +31,21 @@ button#enterBtn {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-
-button {
+    z-index: 1;
     border-radius: 2rem;
     width: 9.5rem;
     font-weight: bolder;
     font-size: 1rem;
     padding: 15px;
-    background-color: black;
     color: white;
     cursor: pointer;
-    background: linear-gradient(to right, black, #3b3d62); /* Adjust the lighter shade of purple as needed */
+    background: linear-gradient(to right, black, #3b3d62); 
+}
 
-  }
-  
-  /* .nested-square {
-    border-color: var(--random-color);
-    border: 15px;
-    border-width: 15px;
-  } */
+.nested-square {
+    position: absolute;
+    width: calc(100% - 15px); 
+    height: calc(100% - 15px);
+    background-color: var(--random-color); 
+    margin: 10px;
+}
